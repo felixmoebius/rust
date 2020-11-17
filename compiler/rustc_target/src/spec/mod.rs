@@ -61,6 +61,7 @@ mod fuchsia_base;
 mod haiku_base;
 mod hermit_base;
 mod hermit_kernel_base;
+mod unikraft_base;
 mod illumos_base;
 mod l4re_base;
 mod linux_base;
@@ -636,6 +637,8 @@ supported_targets! {
     ("aarch64-unknown-hermit", aarch64_unknown_hermit),
     ("x86_64-unknown-hermit", x86_64_unknown_hermit),
     ("x86_64-unknown-hermit-kernel", x86_64_unknown_hermit_kernel),
+
+    ("x86_64-unknown-unikraft", x86_64_unknown_unikraft),
 
     ("riscv32i-unknown-none-elf", riscv32i_unknown_none_elf),
     ("riscv32imc-unknown-none-elf", riscv32imc_unknown_none_elf),
