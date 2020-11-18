@@ -15,7 +15,8 @@
     target_os = "linux",
     target_os = "fuchsia",
     target_os = "redox",
-    target_os = "emscripten"
+    target_os = "emscripten",
+    target_os = "unikraft"
 ))]
 pub unsafe fn register_dtor(t: *mut u8, dtor: unsafe extern "C" fn(*mut u8)) {
     use crate::mem;

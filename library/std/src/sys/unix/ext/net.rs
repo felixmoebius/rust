@@ -6,7 +6,7 @@
 mod tests;
 
 // FIXME(#43348): Make libc adapt #[doc(cfg(...))] so we don't need these fake definitions here?
-#[cfg(not(unix))]
+#[cfg(all(not(unix), not(target_os = "unikraft")))]
 #[allow(non_camel_case_types)]
 mod libc {
     pub use libc::c_int;

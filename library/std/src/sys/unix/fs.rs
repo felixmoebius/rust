@@ -594,7 +594,8 @@ impl DirEntry {
         target_os = "l4re",
         target_os = "fuchsia",
         target_os = "redox",
-        target_os = "vxworks"
+        target_os = "vxworks",
+        target_os = "unikraft"
     ))]
     pub fn ino(&self) -> u64 {
         self.entry.d_ino as u64
@@ -633,7 +634,8 @@ impl DirEntry {
         target_os = "emscripten",
         target_os = "l4re",
         target_os = "haiku",
-        target_os = "vxworks"
+        target_os = "vxworks",
+        target_os = "unikraft"
     ))]
     fn name_bytes(&self) -> &[u8] {
         unsafe { CStr::from_ptr(self.entry.d_name.as_ptr()).to_bytes() }
