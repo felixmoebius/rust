@@ -4,7 +4,8 @@ use crate::io::ErrorKind;
 
 #[cfg(any(doc, target_os = "linux"))]
 pub use crate::os::linux as platform;
-#[cfg(any(doc, target_os = "unikraft"))]
+
+#[cfg(all(not(doc), target_os = "unikraft"))]
 pub use crate::os::unikraft as platform;
 #[cfg(all(not(doc), target_os = "android"))]
 pub use crate::os::android as platform;
