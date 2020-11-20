@@ -68,6 +68,7 @@ cfg_if::cfg_if! {
         pub use self::ext as unix_ext;
     } else if #[cfg(any(target_os = "cloudabi",
                         target_os = "hermit",
+                        target_os = "unikraft",
                         target_arch = "wasm32",
                         all(target_vendor = "fortanix", target_env = "sgx")))] {
         // On CloudABI and wasm right now the module below doesn't compile
