@@ -11,7 +11,7 @@
 #![allow(deprecated)]
 #![allow(missing_debug_implementations)]
 
-use crate::os::raw::c_ulong;
+//use crate::os::raw::c_ulong;
 
 #[stable(feature = "raw_ext", since = "1.1.0")]
 pub type dev_t = u64;
@@ -19,7 +19,7 @@ pub type dev_t = u64;
 pub type mode_t = u32;
 
 #[stable(feature = "pthread_t", since = "1.8.0")]
-pub type pthread_t = c_ulong;
+pub type pthread_t = libc::pthread_t;
 
 #[doc(inline)]
 #[stable(feature = "raw_ext", since = "1.1.0")]
