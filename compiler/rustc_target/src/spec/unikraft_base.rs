@@ -20,7 +20,7 @@ pub fn opts() -> TargetOptions {
         position_independent_executables: true,
         static_position_independent_executables: true,
         relocation_model: RelocModel::Static,
-        os_family: None,
+        os_family: Some("unix".to_string()),
         tls_model: TlsModel::InitialExec,
         ..Default::default()
     }

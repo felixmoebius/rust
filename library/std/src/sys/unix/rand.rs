@@ -11,7 +11,7 @@ pub fn hashmap_random_keys() -> (u64, u64) {
 }
 
 #[cfg(all(
-    any(unix, target_os = "unikraft"),
+    unix,
     not(target_os = "macos"),
     not(target_os = "ios"),
     not(target_os = "openbsd"),
