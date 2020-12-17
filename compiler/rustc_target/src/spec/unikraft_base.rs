@@ -13,7 +13,7 @@ pub fn opts() -> TargetOptions {
         linker_flavor: LinkerFlavor::Lld(LldFlavor::Ld),
         disable_redzone: true,
         linker: Some("rust-lld".to_owned()),
-        has_elf_tls: true,
+        has_elf_tls: false,
         linker_is_gnu: true,
         pre_link_args,
         panic_strategy: PanicStrategy::Abort,
